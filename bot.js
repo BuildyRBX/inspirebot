@@ -112,7 +112,7 @@ bot.on("message", async message => {
         .addField('Reason', reasoon)
         .addField("Server", message.guild.name)
         .setThumbnail('https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Close-512.png')
-        .setFooter('Take some time to think about why you have kicked.')
+        .setFooter('Take some time to think about why you have been kicked.')
         user.send(kickwrn);
     }
     if (cmd === `${prefix}ban`) {
@@ -135,7 +135,7 @@ bot.on("message", async message => {
         .addField('Reason', reasoon)
         .addField("Server", message.guild.name)
         .setThumbnail('https://cdn4.iconfinder.com/data/icons/web-ui-color/128/Close-512.png')
-        .setFooter('Take some time to think about why you have banned.')
+        .setFooter('Take some time to think about why you have been banned.')
         user.send(banwarn);
     }
     if(cmd === `${prefix}cmds`) {
