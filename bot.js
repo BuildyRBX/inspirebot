@@ -9,7 +9,7 @@ bot.on("ready", async () => {
 });
 
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('521350093694042112').send(`**${member.username}** has left the server!`)
+    bot.channels.get('521350093694042112').send(`**${message.guild.member(member.user)}** has left the server!`)
 });
 
 bot.on("message", async message => {
