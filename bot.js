@@ -8,6 +8,10 @@ bot.on("ready", async () => {
     bot.channels.get('521106261844951050').send('**I am awake! :smile:**');
 });
 
+bot.on('guildMemberRemove', member => {
+    bot.channels.get('521350093694042112').send(`**${member.username}** has left the server!`)
+});
+
 bot.on("message", async message => {
     if(message.author.bot) return;
     if(message.channel.type === "dm") return;
