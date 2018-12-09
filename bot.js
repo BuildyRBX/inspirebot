@@ -148,7 +148,8 @@ bot.on("message", async message => {
         .addField('Moderation')
         .addField('warn', 'Usage: `>warn {user} {reason}')
         .addField('kick', 'Usage: `>kick {user} {reason}')
-        .addField('ban', 'Usage: `>ban {user} {reason}')
+        .addField('ban', 'Usage: `>ban {user} {reason}');
+        message.author.send(cmds)
     }
 });
 
