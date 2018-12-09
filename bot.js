@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const config = require("./config.json");
 const bot = new Discord.Client()
-const prefix = config.prefix; 
+const prefix = '>' 
 
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`)
