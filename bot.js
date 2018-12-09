@@ -134,6 +134,18 @@ bot.on("message", async message => {
         .setFooter('Take some time to think about why you have banned.')
         user.send(banwarn);
     }
+    if(cmd === `${prefix}cmds`) {
+        let cmds = new Discord.RichEmbed()
+        .setTitle('InspireBot Commnds List')
+        .addField('hello', 'Usage: `>hello`')
+        .addField('serverinfo', 'Usage: `>serverinfo`')
+        .addField('botinfo', 'Usage: `>botinfo`')
+        .addField('report', 'Usage: `>report {user} {reason}`')
+        .addField('Moderation')
+        .addField('warn', 'Usage: `>warn {user} {reason}')
+        .addField('kick', 'Usage: `>kick {user} {reason}')
+        .addField('ban', 'Usage: `>ban {user} {reason}')
+    }
 });
 
 bot.login(process.env.BOT_TOKEN);
