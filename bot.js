@@ -151,6 +151,9 @@ bot.on("message", async message => {
         .addField('ban', 'Usage: `>ban {user} {reason}');
         message.author.send(cmds)
     }
+    if(cmd ===`${prefix}who-does-edward-crush-on?` {
+        message.reply('Lucided')
+    }
 });
 
 bot.login(process.env.BOT_TOKEN);
