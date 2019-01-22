@@ -5,11 +5,11 @@ const prefix = '>'
 bot.on("ready", async () => {
     console.log(`${bot.user.username} is online!`)
     bot.user.setActivity("Inspiration Core")
-    bot.channels.get('521106261844951050').send('**I am awake! :smile:**');
+    bot.channels.get('537135969493712907').send('**<BOOTUP> *ID 566 :inspire:**');
 });
 
 bot.on('guildMemberRemove', member => {
-    bot.channels.get('521350093694042112').send(`<@${member.id}> has left the server!`)
+    bot.channels.get('536848026300448778').send(`<@${member.id}> has left the server!`)
 });
 
 bot.on("message", async message => {
@@ -56,7 +56,7 @@ bot.on("message", async message => {
         .addField('User:', user)
         .addField('Reason:', reasoon)
         .addField('Reported By:', message.author.username);
-        return bot.channels.get('514326232830312449').send(report)
+        return bot.channels.get('537166911469781003').send(report)
     }
     if(cmd === `${prefix}warn`) {
         let user = message.guild.member(message.mentions.members.first())
@@ -71,7 +71,7 @@ bot.on("message", async message => {
         .addField('Action Taken', 'Warning')
         .addField('By:', message.author.username);
         
-        bot.channels.get('514326232830312449').send(report);
+        bot.channels.get('536709298152275978').send(report);
         let warning = new Discord.RichEmbed()
         .setTitle('Warning')
         .addField('Reason', reasoon)
@@ -106,7 +106,7 @@ bot.on("message", async message => {
         .addField('Action Taken', 'Kick')
         .addField('By:', message.author.username);
 
-        bot.channels.get('514326232830312449').send(report);
+        bot.channels.get('536709298152275978').send(report);
         let kickwrn = new Discord.RichEmbed()
         .setTitle('Kicked')
         .addField('Reason', reasoon)
@@ -129,7 +129,7 @@ bot.on("message", async message => {
         .addField('Action Taken', 'Ban')
         .addField('By:', message.author.username);
 
-        bot.channels.get('514326232830312449').send(report);
+        bot.channels.get('536709298152275978').send(report);
         let banwarn = new Discord.RichEmbed()
         .setTitle('Banned')
         .addField('Reason', reasoon)
@@ -145,14 +145,11 @@ bot.on("message", async message => {
         .addField('serverinfo', 'Usage: `>serverinfo`')
         .addField('botinfo', 'Usage: `>botinfo`')
         .addField('report', 'Usage: `>report {user} {reason}`')
-        .addField('Moderation')
+        .addField('Moderation', '')
         .addField('warn', 'Usage: `>warn {user} {reason}')
         .addField('kick', 'Usage: `>kick {user} {reason}')
         .addField('ban', 'Usage: `>ban {user} {reason}');
         message.author.send(cmds)
-    }
-     if (cmd === `${prefix}who-is-edward-crushing-on?`) {
-        message.reply('Lucided')
     }
 });
 
